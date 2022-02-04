@@ -1,22 +1,22 @@
 import video from "../data/video";
 
 function CommentListItems() {
-  const commentList = video.comments.map((comments) => {
+  const commentList = video.comments.map((comment) => {
     return (
-      <CommentListItems
-        key={video.comments.id}
-        user={video.comments.user}
-        comment={video.comments.comment}
-      />
+      <div>
+        <h3>{comment.user}</h3>
+        <p>{comment.comment}</p>
+      </div>
     );
   });
 
   return (
     <div>
-      <h3>{video.comments[0].user}</h3>
+      {commentList}
+      {/* <h3>{video.comments[0].user}</h3>
       <p>{video.comments[0].comment}</p>
       <h3>{video.comments[1].user}</h3>
-      <p>{video.comments[1].comment}</p>
+      <p>{video.comments[1].comment}</p> */}
     </div>
   );
 }
